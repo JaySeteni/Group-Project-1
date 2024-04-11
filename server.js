@@ -1,6 +1,6 @@
+const productsList = document.getElementById('products-list');
+
 window.onload = async function () {
-    const productsList = document.getElementById('products-list');
-    
     try {
       const response = await fetch('https://fakestoreapi.com/products');
       const products = await response.json();
