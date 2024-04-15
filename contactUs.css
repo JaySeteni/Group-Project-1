@@ -1,0 +1,129 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(177, 202, 181, 0.5);
+  }
+
+  .navbar {
+    background-color: #110d11 !important;
+}
+
+.navbar-brand-light {
+    font-size: 30px !important;
+    font-weight: bolder;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 20px;
+}
+
+
+.nav-link:hover{
+ background-color: rgb(44, 55, 65) !important;
+ border-radius: 20px !important;
+}
+
+  /* contact page  */
+  .contactUs{
+    padding:20% 0px;
+    background-color: rgb(212, 219, 219);
+  }
+
+  .contactUsText{
+    text-align: center;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: lighter;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+  }
+  
+  form{
+    display: grid;
+    justify-content: center;
+  }
+  .flex1 input, .flex2 input{
+    width:250px;
+    height:60px;
+    background-color:rgb(212, 219, 219);
+    border:none;
+    border-bottom:1px solid rgb(105, 104, 104);
+  }
+  .flex1 input:focus, 
+  .flex2 input:focus{
+    /* background-color: red; */
+    border:none;
+  }
+  .five .message{
+    background-color:rgb(212, 219, 219);
+    resize:none;
+    width:250px;
+    height: 60px;
+    border:none;
+    border-bottom:1px solid rgb(105, 104, 104);
+  }
+  .message::placeholder{
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 25px;
+  }
+  .contactUs .submit{
+    margin:24px 145px;
+    background-color: rgb(0, 10, 10);
+    color: rgba(229, 233, 227, 0.973);
+    width:40%;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  .contactUs .submit:hover{
+    background-color: #e7e1e1;
+    color:black;
+    border-radius:20px;
+  }
+/* contact page ends */
+/* media queries */
+@media (min-width: 600px){
+  .contactUs{
+    padding:10% 0px;
+  }
+  form{
+    display: grid;
+    justify-content: center;
+  }
+  .flex1 input, .flex2 input{
+    width:200px;
+    background-color:rgb(212, 219, 219);
+    border:none;
+    border-bottom:1px solid rgb(105, 104, 104);
+  }
+  .flex1 input, .flex2 input::placeholder{
+    font-size: 18px;
+
+  }
+  .flex1{
+    display: flex;
+    gap: 15%;
+    margin-bottom: 30px;
+  }
+  .flex2{
+    display: flex;
+    gap: 15%;
+  }
+  .five .message{
+    width:100%;
+  }
+  .contactUs .submit{
+  margin: 25px 35%;
+  width:30%;
+  }
+
+}
