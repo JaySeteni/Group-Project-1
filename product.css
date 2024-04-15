@@ -3,17 +3,30 @@ body {
     background-color: #f0f0f0;
   }
 
-  .navbar{
-    background-color: #110d11 !important;
-  }
+  
+.navbar {
+  background-color: #110d11 !important;
+}
 
-  .navbar-nav{
-    color: #ccc !important;
-  }
-  .navbar-nav .nav-link {
-    color: white !important;
-  }
+.navbar-brand-light {
+  font-size: 30px !important;
+  font-weight: bolder;
+  color: whitesmoke;
+  text-decoration: none;
+}
 
+
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-size: 20px;
+}
+
+
+.nav-link:hover{
+background-color: rgb(44, 55, 65) !important;
+border-radius: 20px !important;
+}
   .search{
     display: flex;
     margin: auto;
