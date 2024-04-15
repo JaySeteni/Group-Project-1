@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+.navbar{
+    background-color: #110d11 !important;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+
+
+#home{
+    background-image: url("https://i.postimg.cc/W3gJvMp1/pngtree-childrens-clothing-store-shopping-mall-photography-map-with-map-image-796892.jpg");
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* .container1{
+    background-image: url("https://i.postimg.cc/KvGStxM9/104960250-C33-2.jpg");
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
+/* .container2{
+    background-image: url("https://i.postimg.cc/zGMGdVwD/104965091-C57-2.jpg");
+    max-width: 400px;
+    width: 100vw;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
+.container {
+    display: flex; 
+    margin-top: 60px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    /* background-color: rgb(217, 221, 224); */
+   
+    
+}
+
+.container1, .container2 {
+    display: inline;
+    flex: 1; 
+    /* margin-inline: 70px; */
+    
+}
+
+img{
+    width: 490px;
+}
+h1{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    color: black;
+}
