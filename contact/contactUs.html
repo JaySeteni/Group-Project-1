@@ -1,65 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="about.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MixMart-contact</title>
+        <link rel="stylesheet" href="./contactUs.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand-light m-2 logo" href="./home.html">MixMart</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./product.html">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./contactUs.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    <div class="container">
-        <div class="about-content">
-            <div class="grid-wrapper">
-                <div>
-                    <img src="./images/clothes.jpg">
-                </div>
-                <div>
-                    <img src="./images/jewels.jpg">
-                </div>
-                <div>
-                    <img src="./images/backpack.jpg">
-                </div>
-                <div>
-                    <img src="./images/skyworth.jpg">
-                </div>
+    </head>
+    <body>
+        <!-- navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand-light m-2 logo" href="../home.html">MixMart</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../about/about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../product/product.html">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../contact/contactUs.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="content">
-                <h2 class="title">About Us</h2>
-                <h3>Sell with us!</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quis. Harum inventore exercitationem enim ipsa Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quis. Harum inventore exercitationem enim ipsa</p>  
+          </nav>
+          <!-- main starts -->
+        <main>
+            <div class="contactUs">
+                <h2 class="contactUsText">contact us</h2>
+                <form action="#">
+                    <div class="flex1">
+                        <div class="formRow one">
+                            <div class="inputData">
+                                <input type="text" name="fullName" class="fullName" required placeholder="Full name" required/>
+                            </div>
+                        </div>
+                        <div class="formRow two">
+                            <div class="inputData">
+                                <input type="text" name="lastName" class="lastName" placeholder="Surname" required/><br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex2">
+                        <div class="formRow three">
+                            <div class="inputData">
+                                <input type="num" name="contactNo" class="contactNo" placeholder="ContactNo:" required/><br/>
+                            </div>
+                        </div>
+                        <div class="formRow four">
+                            <div class="inputData">
+                                <input type="email" name="email" class="email" placeholder="Email Address:" required/><br/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formRow five">
+                        <div class="inputData">
+                            <textarea name="message" class="message" cols="30" rows="20" placeholder="Write message here: "></textarea>
+                        </div>
+                    </div>
+                </form>
+                <input type="submit" class="submit" placeholder="Submit">
             </div>
-        </div>
-    </div>
+        </main>
 
-      <!-- Footer -->
+
+
+
+          <!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-white">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -179,7 +196,8 @@
        </div>
     <!-- Copyright -->
   </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-</html> 
+        <script src="./server.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
