@@ -113,3 +113,14 @@ color:  #262b30;
     transform: translateX(-50%);
 }
 
+.container2, .SecImg, .FourthImg{
+    min-height: 90vh;
+}
+
+/* .ThirdImg{
+ min-height: 10px;
+} */
+
+/* .FourthImg{
+    height: 10%;
+} */
