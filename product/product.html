@@ -53,9 +53,15 @@
 
   <div class="sidebar">
     <input class="search" id="searching" oninput="searchTasks()" type="search" placeholder="Search for your Products">
-    <div>Sort by Price</div>
-    <div>Sort by Title</div>
-    <div>Sort by</div>
+    
+    <span class="sort" onclick="sortPrice()">Sort by Price
+    <select id="sortPrice">
+      <option value="A">Ascending</option>
+      <option value="W">Descending</option>   
+    </select>
+  </span>
+    <div class="sort">Sort by Title</div>
+   
     
   </div>
   <div id="products-list"></div>

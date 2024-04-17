@@ -28,6 +28,11 @@
  background-color: rgb(44, 55, 65) !important;
  border-radius: 20px !important;
 }
+
+/* .nav-link, a:active {
+    color: #050607 !important;
+    background-color: yellow !important;
+  } */
 .mycontainer {
     display: flex;
     margin-top: 60px;
