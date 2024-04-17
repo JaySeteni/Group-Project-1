@@ -1,0 +1,54 @@
+*{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .navbar {
+    background-color: #110d11 !important;
+}
+
+.navbar-brand-light {
+    font-size: 30px !important;
+    font-weight: bolder;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 20px;
+}
+
+
+.nav-link:hover{
+ background-color: rgb(44, 55, 65) !important;
+ border-radius: 20px !important;
+}
+
+.about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .content{
+    flex: 1;
+    margin-right: 10%;
+  }
+  
+
+  h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  h3{
+    margin-bottom: 5%;
+    font-family: 'Courier New', Courier, monospace;
+  }
