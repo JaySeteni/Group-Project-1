@@ -17,7 +17,18 @@
 }
 
 
-.nav-link:hover{
+.nav-link:hover::after{
  background-color: rgb(44, 55, 65) !important;
  border-radius: 20px !important;
+ display: block;
+}
+.after{
+    display: none;
+}
+.tracking{
+    color:red;
+}
+.tracking:hover{
+    color:blue;
+    content: "this is hover baba"
 }
