@@ -81,7 +81,7 @@ a.navbar-brand-light {
     outline:none;
   }  
   .contactUs .submit{
-    margin:24px 145px;
+    margin:24px 0;
     background-color: #212529;
     color: rgba(229, 233, 227, 0.973);
     width:40%;
