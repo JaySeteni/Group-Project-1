@@ -1,0 +1,15 @@
+## DON'T NOT TOUCH ##
+
+
+**********************
+** Sfiso's Feedback **
+**********************
+
+17/04/2023 10:28
+
+Good morning Group B.
+
+_Code & Project Review
+Good job on the User Interface, I believe you are fixing the navigation of the app as I currently don't have access to other pages
+
+Suggestion#1: refrain from using magic strings which is a "direct usage of a String in the code", e.g in the fetch(), it would be better to declare a variable called URL and instantiate it with the url link then add it as a parameter in the fetch, rather than fetch("abcc"). 
