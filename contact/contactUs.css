@@ -60,33 +60,38 @@ a.navbar-brand-light {
   }
   .flex1 input:focus, 
   .flex2 input:focus{
-    /* background-color: red; */
-    border:none;
+    outline: none;
+    padding: 15px;
   }
   .five .message{
     background-color:rgb(212, 219, 219);
+    margin-top: 50px;
     resize:none;
-    width:250px;
-    height: 60px;
+    width:350px;
+    height: 55px;
     border:none;
     border-bottom:1px solid rgb(105, 104, 104);
+    font-size: 22px;
   }
   .message::placeholder{
     font-size: 18px;
     padding-left: 10px;
-    padding-top: 25px;
   }
+  .five .message:focus{
+    outline:none;
+  }  
   .contactUs .submit{
     margin:24px 145px;
-    background-color: rgb(0, 10, 10);
+    background-color: #212529;
     color: rgba(229, 233, 227, 0.973);
     width:40%;
     font-size: 18px;
     border-radius: 10px;
   }
+
   .contactUs .submit:hover{
-    background-color: #e7e1e1;
-    color:black;
+    background-color: #080808;
+    color:rgba(229, 233, 227, 0.973);
     border-radius:20px;
   }
 /* contact page ends */
