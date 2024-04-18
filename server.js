@@ -41,3 +41,4 @@ window.onload = async function () {
         console.error('Error fetching data:', error);
     }
 };
+
