@@ -3,10 +3,10 @@ const categories = document.querySelectorAll('.category');
 
 window.onload = async function () {
     try {
-        const response = await fetch('https://fakestoreapi.com/products');
+        const response = await fetch('http://localhost:8000/products');
         const products = await response.json();
         
-        
+        console.log(products)
         function displayProducts(category) {
             productsList.innerHTML = ''; 
             
@@ -18,7 +18,7 @@ window.onload = async function () {
                         <img src="${product.image}" alt="${product.title}">
                         <h3>${product.title}</h3>
                         <p>R${product.price.toFixed(2)}</p> 
-                        <button>Add To Cart</button>
+                        <button><a href="./viewone.html?id=${product.id}">Add To Cart</a></button>
                     `;
                     
                     productsList.appendChild(productDiv);
