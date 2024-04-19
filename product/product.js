@@ -10,6 +10,7 @@ window.onload = async ()=>{
         const data = await fetch(`http://localhost:8000/products/${productId}`)
         const item = await  data.json()
 
+        console.log(item)
         container.innerHTML =
          `
         <div class="flex1">
@@ -17,21 +18,21 @@ window.onload = async ()=>{
                 <img src="${item.image}" 
                 alt="${item.title}" />
             </div>
-            <div class="cartButton">
-                <button class="cart"> add to cart</button>
-                <button class="like"> like </button>
             </div>
-        </div>
-        <div class="flex2">
+            <div class="flex2">
             <p class="product-name">
-                ${item.title}
+            ${item.title}
+            </p>
+            <p class="description">
+            ${item.description}
             </p>
             <div class="detail">
-                ${item.price}
+               R ${item.price}
             </div>
-            <p>
-                ${item.description}
-            </p>
+            <div class="cartButton">
+                <button class="cart" onclick="addtocart(${item.item})"> add to cart</button>
+                <button class="heart"> <i class="fa-regular fa-heart"></i></button>
+            </div>
         </div>`
         console.log(item)
 
@@ -40,26 +41,26 @@ window.onload = async ()=>{
     }
 }
 
-function addtocart(item) {
-    item['qty'] = 1
-    let productExist = cartlist.includes(item)
+// function addtocart(item) {
+//     item['qty'] = 1
+//     let productExist = cartlist.includes(item)
 
-    console.log(productExist);
+//     console.log(productExist);
 
-    if(productExist){
-        for( i=0; i<= cartlist.length; i++){
-            item.price = item.price + item.price
-            cartlist.push(item)
-        }
-        console.log(item)
-    }else{
-        cartlist.push(item)
-        console.log(item)
-    }
+//     if(productExist){
+//         for( i=0; i<= cartlist.length; i++){
+//             item.price = item.price + item.price
+//             cartlist.push(item)
+//         }
+//         console.log(item)
+//     }else{
+//         cartlist.push(item)
+//         console.log(item)
+//     }
 
-    console.log(cartlist)
+//     console.log(cartlist)
     
-}
+// }
 
 let product = {
     id: "7",
@@ -74,4 +75,26 @@ let product = {
     }
 }
 
-addtocart(product)
+let btn = document.querySelector('.cart')
+let addtocart =  (item)=>{
+        console.log(item)
+        item['qty'] = 1
+        let productExist = cartlist.includes(item)
+    
+        console.log(productExist);
+    
+        if(productExist){
+            for( i=0; i<= cartlist.length; i++){
+                item.price = item.price + item.price
+                cartlist.push(item)
+            }
+            console.log(item)
+        }else{
+            cartlist.push(item)
+            console.log(item)
+        }
+    
+        console.log(cartlist)
+        
+   
+}
