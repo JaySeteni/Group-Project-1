@@ -27,6 +27,7 @@ window.onload = async function () {
                         </div>
                         
                         
+                        <button onclick="addtocart(${product})">add to cart</button>
                     `;
                     
                     productsList.appendChild(productDiv);
