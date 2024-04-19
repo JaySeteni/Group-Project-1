@@ -10,24 +10,26 @@ window.onload = async ()=>{
         const data = await fetch(`http://localhost:8000/products/${productId}`)
         const item = await  data.json()
 
-        container.innerHTML = `<div class="flex1">
-        <div class="product-image">
-            <img src="${item.image}" 
-            alt="${item.title}" />
+        container.innerHTML =
+         `
+        <div class="flex1">
+            <div class="product-image">
+                <img src="${item.image}" 
+                alt="${item.title}" />
+            </div>
+            <p class="product-name">
+                ${item.title}
+            </p>
+            <div class="detail">
+                ${item.price}
+            </div>
         </div>
-        <p class="product-name">
-            ${item.title}
-        </p>
-        <div class="detail">
-            ${item.price}
-        </div>
-    </div>
-    <div class="flex2">
-        <p>
-            ${item.description}
-        </p>
-    </div>`
-        console.log(item)
+        <div class="flex2">
+            <p>
+                ${item.description}
+            </p>
+        </div>`
+            console.log(item)
 
     } catch (error) {
         console.error("Could not get item", error)
