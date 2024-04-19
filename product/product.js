@@ -1,11 +1,35 @@
 let cartlist = []
+
+let container = document.querySelector('.product')
+
+
+
 window.onload = async ()=>{
     try {
         const productId = window.location.search.substring(4);
         const data = await fetch(`http://localhost:8000/products/${productId}`)
         const item = await  data.json()
 
-        console.log(item)
+        container.innerHTML =
+         `
+        <div class="flex1">
+            <div class="product-image">
+                <img src="${item.image}" 
+                alt="${item.title}" />
+            </div>
+            <p class="product-name">
+                ${item.title}
+            </p>
+            <div class="detail">
+                ${item.price}
+            </div>
+        </div>
+        <div class="flex2">
+            <p>
+                ${item.description}
+            </p>
+        </div>`
+            console.log(item)
 
     } catch (error) {
         console.error("Could not get item", error)
@@ -13,7 +37,10 @@ window.onload = async ()=>{
 }
 
 function addtocart(item) {
+    item['qty'] = 1
     let productExist = cartlist.includes(item)
+
+    console.log(productExist);
 
     if(productExist){
         for( i=0; i<= cartlist.length; i++){
@@ -26,10 +53,11 @@ function addtocart(item) {
         console.log(item)
     }
 
+    console.log(cartlist)
     
 }
 
-addtocart({
+let product = {
     id: "7",
     title: "White Gold Plated Princess",
     price: 9.99,
@@ -40,4 +68,44 @@ addtocart({
         rate: 3,
         count: 400
     }
-})
+}
+
+addtocart(product)
+
+
+// jay
+
+// const productContainer = document.querySelector("#product-container")
+// const spinner = document.querySelector('#loading')
+// async function 
+// fetchAndDisplaySingleProduct(){
+//     spinner.computedStyleMap.display = 'inline-block';
+//     const productId = new URLSearchParams
+//     (window.location.search).get("id");
+//     const response = await fetch(
+//     `https://fakestoreapi.com/products/${productId}`
+//     );
+//     const product = await response.json();
+//     console.log(product, productId);
+//     displayProduct(product);
+// }
+
+// function displayProduct(product){
+//     spinner.computedStyleMap.display = 'none';
+//     productContainer.innerHTML = `  
+//     <div class="product-image">
+//         <img src=${product.image} 
+//         alt=${product.title} />
+//     </div>
+//     <p class="product-name">
+//         ${product.title}    
+//     </p>
+//     <p class="product-description">
+//      ${product.description}
+//     </p>
+//     <div class="detail">
+//         ${product.price}
+//     </div>
+// </div>`
+// }
+// fetchAndDisplaySingleProduct();
