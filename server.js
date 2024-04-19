@@ -15,8 +15,9 @@ window.onload = async function () {
                     const productDiv = document.createElement('div'); 
                     productDiv.classList.add('product');
                     productDiv.innerHTML = `
-                        <img class="img" src="${product.image}" alt="${product.title}">
-                       
+                    <div clss="image-container">    
+                    <img class="img" src="${product.image}" alt="${product.title}">
+                   
                         <div class="cardBody">
                             <span>${product.title}</span>
                         </div>
@@ -25,6 +26,7 @@ window.onload = async function () {
                             <p class="price">R${product.price.toFixed(2)}</p> 
                            <button><a href="./viewone.html?id=${product.id}">View More</a></button>
                         </div>
+                        </div> 
                         
                         
                     `;
