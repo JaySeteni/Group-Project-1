@@ -27,7 +27,7 @@ color: rgb(187, 199, 211) !important;
 
 } 
 
- nav-item, a, .nav-link:active {
+ nav-item, a,.nav-link:active {
   color: rgb(187, 199, 211) !important
   
 } 
@@ -45,6 +45,11 @@ color: rgb(187, 199, 211) !important;
   display: flex;
   justify-content: space-between;
   margin: 0 20px 0 20px;
+}
+
+.sort2{
+  background-color: #050607;
+  color: #d6d6d6;
 }
 /* .sort{
   display: block;
@@ -137,10 +142,14 @@ color: rgb(187, 199, 211) !important;
     transition: background-color 0.3s;
   }
 
-  .img{
-    display: flex;
-    justify-content: center;
-  }
+  .image-container {
+    text-align: center;
+}
+
+.img {
+    max-width: 100%;
+}
+
 
   .cardFooter,.price{
     color: #120822;
