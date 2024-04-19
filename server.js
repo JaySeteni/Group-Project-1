@@ -25,6 +25,12 @@ window.onload = async function () {
                             <p class="price">R${product.price.toFixed(2)}</p> 
                            <button onclick="addtocart(${product})"><a href="../product/viewone.html?id=${product.id}">View More</a></button>
                         </div>`;
+                    productDiv.innerHTML = `
+                        <img src="${product.image}" alt="${product.title}">
+                        <h3>${product.title}</h3>
+                        <p>R${product.price.toFixed(2)}</p> 
+                        <button onclick="addtocart(${product})"><a href="./viewone.html?id=${product.id}">Add To Cart</a></button>
+                    `;
                     
                     productsList.appendChild(productDiv);
                 }
