@@ -118,8 +118,12 @@ color:  #262b30;
     transform: translateX(-50%);
 }
 
-.container1,.container2, .FirstImg, .SecImg, .FourthImg{
+/* .container1,.container2, .FirstImg, .SecImg, .ThirdImg, .FourthImg{
     min-height: 60vh;
+} */
+
+.container1, .FirstImg, .SecImg{
+    min-height: 10px;
 }
 
 /* .ThirdImg{

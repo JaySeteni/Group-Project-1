@@ -25,15 +25,15 @@ body {
 }
 
 
-/* .nav-link:hover{
-background-color: rgb(44, 55, 65) !important;
-border-radius: 20px !important;
-} */
+ .nav-link:hover{
+color: rgb(187, 199, 211) !important;
 
-/* nav-item, a, .nav-link:active {
-  color: #050607;
+} 
+
+ nav-item, a, .nav-link:active {
+  color: rgb(187, 199, 211) !important
   
-} */
+} 
   .search{
     display: flex;
     margin: auto;
@@ -146,7 +146,7 @@ border-radius: 20px !important;
   }
 
   .cardFooter,.price{
-    color: #975ef3;
+    color: #120822;
     font-weight: 600;
     
   }
