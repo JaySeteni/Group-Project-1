@@ -29,10 +29,14 @@ body {
 
 
 .nav-link:hover{
- background-color: rgb(44, 55, 65) !important;
- border-radius: 20px !important;
-}
-
+  color: rgb(187, 199, 211) !important;
+  
+  } 
+  
+nav-item, a,.nav-link:active {
+    color: rgb(187, 199, 211) !important;
+    
+  } 
 .about-content{
     display: flex;
     flex-wrap: wrap;

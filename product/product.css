@@ -97,7 +97,7 @@ color: rgb(187, 199, 211) !important;
   .product {
     position: relative;
     width: 220px;
-    height: 280px;
+    height: 290px;
     background-color: #fff;
     padding: 20px;
     /* border: 1px solid #1c252c; */
@@ -110,8 +110,8 @@ color: rgb(187, 199, 211) !important;
 
   .product img {
     max-width: 100%;
-    width: 110px;
-    height: 130px;
+    width: 130px;
+    height: 150px;
     
     
     
@@ -152,7 +152,7 @@ color: rgb(187, 199, 211) !important;
 
 
   .cardFooter,.price{
-    color: #120822;
+    color: red;
     font-weight: 600;
     
   }

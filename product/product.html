@@ -56,13 +56,13 @@
   <option value="W">Descending</option>   
 </select>
 </span>
-<button class="sort2">Sort by Title</button>
+<button class="sort2" onclick="sortTitle()">Sort by Title</button>
 </div>
 
 <div class="cont">
 
   <div class="sidebar">
-    <input class="search" id="searching" oninput="searchTasks()" type="search" placeholder="Search for your Products">
+    <input class="search" id="searching" oninput="searchProducts()" type="search" placeholder="Search for your Products">
     
   </div>
   <div id="products-list"></div>
@@ -78,7 +78,7 @@
  <!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-white">
   <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+  <section class="d-flex justify-content-center justify-content-lg-around p-4 border-bottom">
     <!-- Left -->
     <div class="me-5 d-none d-lg-block">
       <span>Get connected with us on social networks:</span>
