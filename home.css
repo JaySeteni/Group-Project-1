@@ -80,7 +80,7 @@ h1 {
 
 .carousel-caption h1{
 position: absolute;
-bottom: 500%;
+bottom: 600%;
 font-weight: bold;
 font-size: 50px;
 color:  #262b30;
@@ -102,7 +102,7 @@ color:  #262b30;
     background-color: #343a40;
     color: white !important;
     position: absolute;
-    top: -90%;
+    top: -300%;
     right: 45%;
     
     
@@ -131,6 +131,8 @@ color:  #262b30;
     left: 50%;
     transform: translateX(-50%);
 }
+
+
 
 
 /* .container1,.container2, .FirstImg, .SecImg, .ThirdImg, .FourthImg{
