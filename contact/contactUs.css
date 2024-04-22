@@ -13,7 +13,7 @@ body {
 }
 
 .navbar-toggler{
-  background-color: rgb(187, 199, 211); 
+  background-color: rgb(187, 199, 211) !important; 
 }
 
 a.navbar-brand-light {
