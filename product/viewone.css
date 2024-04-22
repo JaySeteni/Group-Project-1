@@ -7,11 +7,41 @@ body{
     background-color: rgba(186, 202, 211, 0.603);
 }
 
+/* navigation */
+.navbar {
+    background-color: #110d11 !important;
+}
+
+a.navbar-brand-light {
+    font-size: 30px !important;
+    font-weight: bolder;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.navbar-toggler{
+    background-color: rgb(187, 199, 211); 
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 20px;
+}
+
+
+.nav-link:hover{
+  color: rgb(187, 199, 211) !important;
+  
+  } 
+  
+nav-item, a,.nav-link:active {
+    color: rgb(187, 199, 211) !important;
+    
+  } 
+/*Navigation ends*/
 .product {
-    margin-top: 1%;
     background-color: #fff;
     padding: 20px 15px;
-    border: 1px solid #1c252c;
     border-radius: 8px;
     box-shadow: rgba(1, 27, 43, 0.35) 0px 10px 15px;
     display: grid;
