@@ -5,6 +5,10 @@
   
 }
 
+/* body{
+    background-color: rgb(230, 235, 240) !important;
+} */
+
 .navbar {
     background-color: #110d11 !important;
 }
@@ -25,9 +29,14 @@
 
 
 .nav-link:hover{
- background-color: rgb(44, 55, 65) !important;
- border-radius: 20px !important;
-}
+    color: rgb(187, 199, 211) !important;
+    
+    } 
+    
+  nav-item, a,.nav-link:active {
+      color: rgb(187, 199, 211) !important;
+      
+    } 
 
 /* .nav-link, a:active {
     color: #050607 !important;
@@ -38,7 +47,8 @@
     margin-top: 60px;
     margin-bottom: 20px;
     justify-content: space-around;
-    background-color: rgb(217, 221, 224);
+    background-color: rgb(250, 252, 253) !important;
+    
 }
 
 
@@ -47,7 +57,8 @@
 .container2 {
     flex: 1;
     margin-right: 70px;
-    margin-left: 70px;
+    margin-left: 150px;
+    margin-top: 50px;
 }
 
 img {
@@ -60,6 +71,7 @@ h1 {
     font-weight: bolder;
     font-size: 40px;
     color: black;
+    
 }
 
 #home {
@@ -72,10 +84,11 @@ h1 {
 
 #home h1{
 position: relative;
-top: 45%;
+top: 40%;
 font-weight: bold;
 font-size: 50px;
 color:  #262b30;
+
 }
 
 #home h1:hover{
@@ -113,13 +126,31 @@ color:  #262b30;
     font-size: 70px;
     color:  #343a40;
     position: absolute;
-    top: 105%;
+    top: 108%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.container2, .SecImg, .FourthImg{
-    min-height: 90vh;
+
+/* .container1,.container2, .FirstImg, .SecImg, .ThirdImg, .FourthImg{
+    min-height: 60vh;
+} */
+ 
+.container1{
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.hd{
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.FirstImg,.SecImg,.ThirdImg,.FourthImg{
+    min-height: 70vh;
+    width: 400px;
 }
 
 /* .ThirdImg{

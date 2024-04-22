@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(186, 202, 211, 0.603);
+}
+
+.product {
+    margin-top: 1%;
+    background-color: #fff;
+    padding: 20px 15px;
+    border: 1px solid #1c252c;
+    border-radius: 8px;
+    box-shadow: rgba(1, 27, 43, 0.35) 0px 10px 15px;
+    display: grid;
+    justify-content: center;
+}
+
+.product-name{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 15px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.product-image{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.product-image img{
+    width: 100%;
+    height: 100%;
+    max-height:540px;
+    display: grid;
+}
+
+.detail{
+    text-align: center;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: bolder;
+    color:red;
+}
+.cartButton{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+}
+.cartButton button {
+    margin-top: 10px;
+    background-color: #171d22;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.cartButton .like:hover{
+    background-color: white;
+    color:black;
+    font-weight: bolder;
+    border: 1px solid black;
+}
+
+.product button:hover {
+    background-color: #050607;
+}
+
+.description {
+    margin: 20px;
+    height: 20vh;
+    max-height: 40vh;
+    font-size: 19px;
+    text-align: center;
+    font-family: Georgia, Times, 'Times New Roman', serif, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 22px;
+    white-space:wrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+} 
+
+.description:hover{
+    overflow:scroll;
+
+}
+
+.rating{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+}
+.rating-rate i{
+    color:rgba(250, 213, 3, 0.856);
+}
+
+
+@media (min-width: 750px){
+        
+    .product .flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:5px;
+    height:100%;
+    }
+
+    .flex1, .flex2{
+        height:90vh;
+    }
+    .product-image{
+        width:100%;
+        height:100%;
+    }
+    .product-image img{
+    width: 100%;
+    padding: 10px;
+    }
+    .description{
+    margin-top: 20px;
+    width:80%;
+    height:40%;
+    white-space:wrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    }
+
+    .cartButton{
+        display: flex;
+        gap:10px;
+    }
+
+}
