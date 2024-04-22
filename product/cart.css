@@ -60,6 +60,15 @@ nav-item, a,.nav-link:active {
     max-height:540px;
 }
 
+.product-name{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 15px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
 .detail{
     text-align: center;
     font-style: italic;
@@ -73,4 +82,27 @@ nav-item, a,.nav-link:active {
     justify-content: center;
     gap:10px;
     width: 100%;
+}
+
+.cartButton button {
+    margin-top: 10px;
+    background-color: #171d22;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cartButton .like:hover{
+    background-color: white;
+    color:black;
+    font-weight: bolder;
+    border: 1px solid black;
+}
+
+.product button:hover {
+    background-color: #050607;
 }
