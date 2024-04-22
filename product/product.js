@@ -1,4 +1,5 @@
 let cartlist = []
+
 window.onload = async ()=>{
     try {
         const productId = window.location.search.substring(4);
@@ -13,31 +14,23 @@ window.onload = async ()=>{
 }
 
 function addtocart(item) {
-    let productExist = cartlist.includes(item)
-
+    item['qty'] = 1
+    let productExist = cartlist.
+    
+    console.log(productExist)
     if(productExist){
         for( i=0; i<= cartlist.length; i++){
+            item['qty'] += 1
             item.price = item.price + item.price
             cartlist.push(item)
         }
         console.log(item)
     }else{
         cartlist.push(item)
-        console.log(item)
+        console.log(cartlist)
     }
 
     
 }
 
-addtocart({
-    id: "7",
-    title: "White Gold Plated Princess",
-    price: 9.99,
-    description: "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-    category: "jewelery",
-    image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-    rating: {
-        rate: 3,
-        count: 400
-    }
-})
+
