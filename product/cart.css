@@ -106,3 +106,14 @@ nav-item, a,.nav-link:active {
 .product button:hover {
     background-color: #050607;
 }
+
+.rating{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    /* justify-content: space-around; */
+    font-size: 30px;
+}
+.rating-rate i{
+    color:rgba(250, 213, 3, 0.856);
+}
