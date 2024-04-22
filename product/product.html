@@ -35,10 +35,6 @@
     </div>
   </nav>
   
-  <!-- <div class="search">
-    <input class="search" id="searching" oninput="searchTasks()" type="search" placeholder="Search for your Products">
-    
-</div> -->
 
 <div class="categ">
   <span class="category" data-category="all">All</span>
@@ -49,23 +45,24 @@
 </div>
 <hr>
 
-<div class="sorting">
-<span class="sort1" onclick="sortPrice()">Sort by Price
-<select id="sortPrice">
-  <option value="A">Ascending</option>
-  <option value="W">Descending</option>   
-</select>
-</span>
-<button class="sort2" onclick="sortTitle()">Sort by Title</button>
+<div class="sorting"> 
+    <span class="sort1" onclick="sortPrice()">Sort by Price
+     <select id="sortPrice">
+       <option value="A">Ascending</option>
+       <option value="W">Descending</option>   
+     </select>
+    </span>
+    <button class="sort2" onclick="sortTitle()">Sort by Title</button>
 </div>
 
 <div class="cont">
 
   <div class="sidebar">
+
     <input class="search" id="searching" oninput="searchProducts()" type="search" placeholder="Search for your Products">
-    
+    <div id="search-results" class="products-list"></div>
   </div>
-  <div id="products-list"></div>
+  <div id="products-list" class="products-list" ></div>
 </div>
 
 
