@@ -36,7 +36,8 @@ window.onload = async ()=>{
                 </p>
                 <div class="rating">
                     <label class="rating-rate">
-                    * ${item.rating.rate}
+                    ${item.rating.rate}
+                    <i class="fa-solid fa-star"></i>
                     </label>
                     <label class="rating-count">
                         reviews(${item.rating.count})
