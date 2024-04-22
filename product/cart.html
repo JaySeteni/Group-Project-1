@@ -6,7 +6,7 @@
     <title>View item.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/product/cart.css">
+    <link rel="stylesheet" href="./cart.css">
 </head>
 <body>
      <!-- navigation -->
@@ -36,44 +36,19 @@
       </nav>
       <!-- Navigation  ends -->
     
-      <div class="cart"></div>
-      <div class="cartDeets">
+      <div class="cart">
+        <div class="items"></div>
+       </div>
+
+       <div >Total <span class="tot">0</span></div>
+      
         <h2>Cart</h2>
         <p> 
             <span class="item"> 1 item |</span> 
             R 57.99 
         </p>
         <hr>
-      </div>
-      <div class="flex">
-        <div class="flex1">
-            <div class="product-image">
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="${item.title}" />
-            </div>
-        </div>
-        <div class="flex2">
-            <p class="product-name">
-                Fjallraven -
-            </p>
-            <div class="detail">
-                R 57.99
-            </div>
-            <div class="cartButton">
-                    <button class="heart"> <i class="fa-regular fa-heart"></i></button>
-                    <button class="cart" > add to cart</button>
-                </div>
-
-            <div class="rating">
-                <label class="rating-rate">
-                    3
-                <i class="fa-solid fa-star"></i>
-                </label>
-                <label class="rating-count">
-                    reviews(325)
-                </label>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-white">
@@ -188,6 +163,8 @@
       </div>
     </section>
     <!-- Section: Links  -->
+
+  
   
     <!-- Copyright -->
     <div class="text-center p-4" ;>
@@ -200,6 +177,8 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
   
-    <script src="product.js"></script>
+      
+      <script src="cart.js"></script>
+    
 </body>
 </html>

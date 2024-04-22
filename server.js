@@ -1,10 +1,18 @@
+
+
+
+
 let products = JSON.parse(localStorage.getItem('products')) || [];
 const productsList = document.getElementById('products-list');
 const categories = document.querySelectorAll('.category');
 let currentSortPrice = 'A'; 
 let sortedProducts = []; 
+let count = document.querySelector('.cartCount')
+let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : []
+count.innerHTML = cartlist.length
 
 window.onload = async function () {
+    
     try {
         const response = await fetch('http://localhost:8000/products');
         products = await response.json();
@@ -21,7 +29,7 @@ window.onload = async function () {
 
 function displayProducts(category) {
     productsList.innerHTML = ''; 
-    
+   
     const filteredProducts = sortedProducts.filter(product => category === 'all' || product.category.toLowerCase() === category);
     
     filteredProducts.forEach(product => {

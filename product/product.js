@@ -1,8 +1,9 @@
 // Global Variables
 let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : []
 let db_productsq;
+let count = document.querySelector('.cartCount')
+count.innerHTML = cartlist.length
 
-console.log(cartlist)
 let container = document.querySelector('.product')
 
 
