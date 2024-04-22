@@ -7,6 +7,38 @@ body{
     background-color: rgba(186, 202, 211, 0.603);
 }
 
+/* navigation */
+.navbar {
+    background-color: #110d11 !important;
+}
+
+a.navbar-brand-light {
+    font-size: 30px !important;
+    font-weight: bolder;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.navbar-toggler{
+    background-color: rgb(187, 199, 211); 
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 20px;
+}
+
+
+.nav-link:hover{
+  color: rgb(187, 199, 211) !important;
+  
+  } 
+  
+nav-item, a,.nav-link:active {
+    color: rgb(187, 199, 211) !important;
+    
+  } 
+/*Navigation ends*/
 .product {
     margin-top: 1%;
     background-color: #fff;
