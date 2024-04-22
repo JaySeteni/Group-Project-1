@@ -1,12 +1,9 @@
 let products = JSON.parse(localStorage.getItem('products')) || [];
 const productsList = document.getElementById('products-list');
 const categories = document.querySelectorAll('.category');
-<<<<<<< HEAD
-=======
 let currentSortPrice = 'A'; 
 let sortedProducts = []; 
 
->>>>>>> feature/Sinaye-Feature
 window.onload = async function () {
     try {
         const response = await fetch('http://localhost:8000/products');
