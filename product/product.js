@@ -1,19 +1,34 @@
-let cartlist = []
+// Global Variables
+let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : []
+let db_productsq;
 
-<<<<<<< HEAD
-=======
+console.log(cartlist)
 let container = document.querySelector('.product')
 
 
 
->>>>>>> 8430ba22406ef92a91d4fbefbe0884d4db4617db
-window.onload = async ()=>{
+window.addEventListener('DOMContentLoaded', async ()=>{
     try {
         const productId = window.location.search.substring(4);
         const data = await fetch(`http://localhost:8000/products/${productId}`)
-        const item = await  data.json()
+        let db_products = await fetch(`http://localhost:8000/products/`)
+        const allItemsFormated = await db_products.json()
 
-        console.log(item)
+        db_productsq = allItemsFormated
+        const item = await  data.json()
+        let product = {
+            id: "7",
+            title: "White Gold Plated Princess",
+            price: 9.99,
+            description: "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+            category: "jewelery",
+            image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+            rating: {
+                rate: 3,
+                count: 400
+            }
+        }
+    
         container.innerHTML =
          `
          <div class="flex">
@@ -30,10 +45,12 @@ window.onload = async ()=>{
                 <div class="detail">
                     R ${item.price}
                 </div>
+
                 <div class="cartButton">
                         <button class="heart"> <i class="fa-regular fa-heart"></i></button>
-                        <button class="cart" onclick="addtocart(${item.item})"> add to cart</button>
-                    </div>
+                        
+                        <button class="cart" onclick= 'addtoCart(${item.id})'> add to cart</button>
+                </div>
                 <p class="description">
                 ${item.description}
                 </p>
@@ -48,90 +65,57 @@ window.onload = async ()=>{
                 </div>
             </div>
         </div>`
-        console.log(item)
+      
 
     } catch (error) {
         console.error("Could not get item", error)
     }
-}
+})
 
-<<<<<<< HEAD
-function addtocart(item) {
-    item['qty'] = 1
-    let productExist = cartlist.
-    
-    console.log(productExist)
-    if(productExist){
-        for( i=0; i<= cartlist.length; i++){
-            item['qty'] += 1
-            item.price = item.price + item.price
-            cartlist.push(item)
-        }
-        console.log(item)
-    }else{
-        cartlist.push(item)
-        console.log(cartlist)
-    }
-=======
-// function addtocart(item) {
-//     item['qty'] = 1
-//     let productExist = cartlist.includes(item)
-
-//     console.log(productExist);
->>>>>>> 8430ba22406ef92a91d4fbefbe0884d4db4617db
-
-//     if(productExist){
-//         for( i=0; i<= cartlist.length; i++){
-//             item.price = item.price + item.price
-//             cartlist.push(item)
-//         }
-//         console.log(item)
-//     }else{
-//         cartlist.push(item)
-//         console.log(item)
-//     }
-
-//     console.log(cartlist)
-    
-// }
-
-<<<<<<< HEAD
-
-=======
-let product = {
-    id: "7",
-    title: "White Gold Plated Princess",
-    price: 9.99,
-    description: "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-    category: "jewelery",
-    image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-    rating: {
-        rate: 3,
-        count: 400
-    }
-}
-
-let btn = document.querySelector('.cart')
-let addtocart =  (item)=>{
-        console.log(item)
-        item['qty'] = 1
-        let productExist = cartlist.includes(item)
-    
-        console.log(productExist);
-    
-        if(productExist){
-            for( i=0; i<= cartlist.length; i++){
-                item.price = item.price + item.price
-                cartlist.push(item)
-            }
-            console.log(item)
-        }else{
-            cartlist.push(item)
-            console.log(item)
-        }
-    
-        console.log(cartlist)
-        
+let  addtoCart = async (prod)=>{
+     console.log("hghghg", prod)
+  
    
+    let item =  await db_productsq.filter( (elem, i) => {
+            
+        return elem.id == prod
+    })
+
+
+    newItem = item.pop() 
+
+    console.log(newItem)
+    
+    let itemExists =  cartlist.some((elem) => {
+       
+         return elem.id == newItem.id
+        
+    });
+
+    console.log("item", itemExists);
+        
+    
+
+    if (itemExists) {
+                    cartlist.forEach(cartItem => {
+                        if (cartItem.id === newItem.id) {
+                            cartItem.price += newItem.price;
+                            cartItem.qty += 1;
+                        }
+            });
+            localStorage.setItem('Cart',JSON.stringify(cartlist))
+    } else {
+            cartlist.push({ ...newItem, qty: 1 });
+            localStorage.setItem('Cart',JSON.stringify(cartlist))
+            }
+            
+    
+console.log(cartlist);
+    
 }
->>>>>>> 8430ba22406ef92a91d4fbefbe0884d4db4617db
+
+
+
+
+
+
