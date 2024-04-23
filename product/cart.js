@@ -14,8 +14,7 @@ let load = async ()=>{
         cartItems.innerHTML +=`<div class="image-container">    
             <img class="img" src="${item.image}" alt="${item.title}">
             <div class="cardBody">
-                <span class="title">${item.title}</span>
-                
+                <span class="title">${item.title}</span>  
             </div>
             <div class="cardFooter">
             <span class = "del_item"><i class="fa-solid fa-trash fa-lg" style="color: #0a121e;"></i></span>

@@ -36,32 +36,6 @@ nav-item, a,.nav-link:active {
     color: rgb(187, 199, 211) !important;
     
   } 
-/*Navigation ends*/
-/* .cart {
-    width: 100%;
-    border-collapse: collapse;
-    border: 2px solid #ddd;
-  }
-  
-  .cart-title {
-    font-size: 1.2em;
-    background-color: #f0f0f0;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .items {
-    border-top: 1px solid #ddd;
-  }
-  
-  .items .image-container {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .items .image-container:last-child {
-    border-bottom: 1px solid;
-  } */
   
 .image-container{
     margin-top: 30px;
@@ -86,6 +60,7 @@ nav-item, a,.nav-link:active {
     color: red; 
     margin-top: 40px;
     margin-left: 40px;
+    font-weight:600;
   }
 .desc{
   margin-top: 20px;
@@ -94,11 +69,12 @@ nav-item, a,.nav-link:active {
 .cardBody{
     border: 1px solid #abb5bd;
     width: 30%;
-    /* box-shadow: rgba(1, 27, 43, 0.35) 0px 4px 4px; */
+    box-shadow: rgba(1, 27, 43, 0.35) 0px 4px 4px;
 }
 
 .del_item{
     margin-left: 40px;
+    cursor: pointer;
     
 }
 
@@ -107,6 +83,7 @@ nav-item, a,.nav-link:active {
     padding: 4px;
     margin-right: 12px;
     box-shadow: rgba(1, 27, 43, 0.35) 0px 3px 3px;
+    cursor: pointer;
     
 }
 
@@ -115,7 +92,17 @@ nav-item, a,.nav-link:active {
     border: 1px solid #abb5bd;
     padding: 4px;
     box-shadow: rgba(1, 27, 43, 0.35) 0px 3px 3px;
+    cursor: pointer;
 }
+
+.incr_item:hover{
+    background-color: #abb5bd;
+}
+
+.decr_item:hover{
+    background-color: #abb5bd;
+}
+
 
 .quantity{
     border: 1px solid #abb5bd;
