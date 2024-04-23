@@ -5,11 +5,11 @@ let currentSortPrice = 'A';
 let sortedProducts = []; 
 let count = document.querySelector('.cartCount')
 let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : []
-count.innerHTML = cartlist.length
-
+    count.innerHTML = cartlist.length
 
 window.onload = async function () {
     
+    console.log(cartlist)
     try {
         const response = await fetch('http://localhost:8000/products');
         products = await response.json();
