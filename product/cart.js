@@ -25,7 +25,7 @@ let load = async ()=>{
             <span class = "del_item"><i class="fa-solid fa-trash fa-lg border border-primary" style="color: #0a121e;"></i></span>
             <p class="price">R${item.price}</p> 
             <span class = "decr_item" onclick="decrement(${x})"><i class="fa-solid fa-minus fa-lg" style="color: #040911;"></i></span>
-            <span class = "decr_item"><i class="fa-solid fa-minus fa-lg" style="color: #040911;"></i></span>
+          
             <span class="quantity">${item.qty}</span>
             <span class= " incr_item" onclick = 'increment(${x})'><i class="fa-solid fa-plus fa-lg" style="color: #050b15;"></i></span>
             
