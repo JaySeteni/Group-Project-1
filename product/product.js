@@ -1,4 +1,5 @@
 // Global Variables
+let savedList = JSON.parse(localStorage.getItem('savedList')) || [];
 let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : []
 let db_productsq;
 let count = document.querySelector('.cartCount')
@@ -48,7 +49,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
                 </div>
 
                 <div class="cartButton">
-                        <button class="heart"> <i class="fa-regular fa-heart"></i></button>
+                        <button class="heart" onclick='saveForLaterButton(${item.id})'> <i class="fa fa-heart"></i></button>
                         
                         <button class="cart" onclick= 'addtoCart(${item.id})'> add to cart</button>
                 </div>
@@ -116,6 +117,35 @@ console.log(cartlist);
 }
 
 
+
+const savedListKey = "savedList"; 
+
+let saveForLaterButton =  async (item_id) => {
+
+  let item =  await db_productsq.filter( (elem, i) => {
+            
+    return elem.id == item_id
+})
+
+    newItem = item.pop() 
+
+
+    let isProductSaved =  savedList.some((elem) => {
+       
+        return elem.id == newItem.id
+       
+   });
+
+  if (!isProductSaved) {
+    
+    savedList.push(newItem);
+    localStorage.setItem(savedListKey, JSON.stringify(savedList));
+    
+    alert("Product saved for later!");
+  } else {
+    alert("Product already saved!");
+  }
+}
 
 
 
