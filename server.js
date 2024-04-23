@@ -1,7 +1,3 @@
-
-
-
-
 let products = JSON.parse(localStorage.getItem('products')) || [];
 const productsList = document.getElementById('products-list');
 const categories = document.querySelectorAll('.category');
@@ -10,6 +6,7 @@ let sortedProducts = [];
 let count = document.querySelector('.cartCount')
 let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : []
 count.innerHTML = cartlist.length
+
 
 window.onload = async function () {
     
@@ -80,14 +77,14 @@ function displaySearchResults(products) {
         const productDiv = document.createElement('div'); 
         productDiv.classList.add('product');
         productDiv.innerHTML = `
-            <div class="image-container">    
-                <img class="img" src="${product.image}" alt="${product.title}">
-                <div class="cardBody">
-                    <span>${product.title}</span>
+            <div style="height:200px;" class="image-container product">    
+                <img style="height:70px; width:70px; class="img" src="${product.image}" alt="${product.title}">
+                <div style="margin-top: 0;" class="cardBody">
+                    <span style="margin-top: 0;">${product.title}</span>
                 </div>
-                <div class="cardFooter">
-                    <p class="price">R${product.price.toFixed(2)}</p> 
-                    <button><a href="./viewone.html?id=${product.id}">View More</a></button>
+                <div style="margin: 1px;" class="cardFooter">
+                    <p  class="price">R${product.price.toFixed(2)}</p> 
+                    <button style="height: 30px;"><a href="./viewone.html?id=${product.id}">View More</a></button>
                 </div>
             </div>`;
         

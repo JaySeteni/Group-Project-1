@@ -37,15 +37,17 @@
     
     } 
     
-  nav-item, a,.nav-link:active {
+    .navbar-nav .nav-item .nav-link:active {
       color: rgb(187, 199, 211) !important;
-      
-    } 
+
+    }
+         
 
 /* .nav-link, a:active {
     color: #050607 !important;
     background-color: yellow !important;
   } */
+  
 .mycontainer {
     display: flex;
     margin-top: 60px;
