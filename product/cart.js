@@ -14,14 +14,15 @@ let load = async ()=>{
         cartItems.innerHTML +=`<div class="image-container">    
             <img class="img" src="${item.image}" alt="${item.title}">
             <div class="cardBody">
-                <span>${item.title}</span>
+                <span class="title">${item.title}</span>  
             </div>
             <div class="cardFooter">
-                <p class="price">R${item.price.toFixed(2)}</p> 
-                <button class = "decr_item">decrease</button>
-                <button class= " incr_item" onclick = 'increment(${x})'>add</button>
-                <button class = "del_item">delete</button>
-
+            <span class = "del_item"><i class="fa-solid fa-trash fa-lg" style="color: #0a121e;"></i></span>
+            <p class="price">R${item.price.toFixed(2)}</p> 
+            <span class = "decr_item"><i class="fa-solid fa-minus fa-lg" style="color: #040911;"></i></span>
+            <span class="quantity">${item.qty}</span>
+            <span class= " incr_item" onclick = 'increment(${x})'><i class="fa-solid fa-plus fa-lg" style="color: #050b15;"></i></span>
+                
             </div>
         </div>`;
             })

@@ -31,10 +31,10 @@ color: rgb(187, 199, 211) !important;
 
 } 
 
- nav-item, a,.nav-link:active {
-  color: rgb(187, 199, 211) !important
-  
-} 
+.navbar-nav .nav-item .nav-link:active {
+  color:  rgb(187, 199, 211) !important; 
+}
+
   .search{
     display: flex;
     margin: auto;
@@ -44,6 +44,10 @@ color: rgb(187, 199, 211) !important;
     border-radius: 6px;
     margin-top: 20px;
 }
+
+/* #search-results #products-list .product .product img{
+height: 10px;
+} */
 
 .sorting{
   display: flex;
@@ -104,11 +108,10 @@ color: rgb(187, 199, 211) !important;
     height: 290px;
     background-color: #fff;
     padding: 20px;
-    /* border: 1px solid #1c252c; */
+    border: 2px solid #abb5bd;
     border-radius: 8px;
     box-shadow: rgba(1, 27, 43, 0.35) 0px 10px 15px;
-    
-    
+     
   }
 
 
@@ -116,8 +119,6 @@ color: rgb(187, 199, 211) !important;
     max-width: 100%;
     width: 130px;
     height: 150px;
-    
-    
     
   }
 

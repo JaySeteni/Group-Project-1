@@ -38,6 +38,12 @@ nav-item, a,.nav-link:active {
     color: rgb(187, 199, 211) !important;
     
   } 
+
+  .navbar-nav .nav-item .nav-link:active {
+    color:  rgb(187, 199, 211) !important; 
+  }
+
+
 /*Navigation ends*/
 .product {
     background-color: #fff;

@@ -36,10 +36,11 @@ a.navbar-brand-light {
   
   } 
   
-nav-item, a,.nav-link:active {
-    color: rgb(187, 199, 211) !important;
-    
-  } 
+  .navbar-nav .nav-item .nav-link:active {
+    color:  rgb(187, 199, 211) !important; 
+  }
+
+
   /* contact page  */
   .contactUs{
     padding:20% 0px;
