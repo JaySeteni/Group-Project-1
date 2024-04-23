@@ -12,9 +12,9 @@ let load = async ()=>{
     cartItems.innerHTML = ""
 
      cartlist.forEach((item, x)=>{
-        cartItems.innerHTML +=`<div class="image-container"> 
+        cartItems.innerHTML +=`<div class="image-container shopping-cart"> 
         <div class="item">   
-        <span class = "del_item"><i class="fa-solid fa-trash fa-lg" style="color: #0a121e;"></i></span>
+        <span class = "del_item"><i class="fa-solid fa-trash fa-lg border border-primary" style="color: #0a121e;"></i></span>
         <div class="image">   
         <img class="img" src="${item.image}" alt="${item.title}">
         </div>   
@@ -22,8 +22,7 @@ let load = async ()=>{
                 <span class="title">${item.title}</span>  
             </div>
             <div class="cardFooter">
-            <span class = "del_item"><i class="fa-solid fa-trash fa-lg border border-primary" style="color: #0a121e;"></i></span>
-            <p class="price">R${item.price}</p> 
+           
             <span class = "decr_item" onclick="decrement(${x})"><i class="fa-solid fa-minus fa-lg" style="color: #040911;"></i></span>
           
             <span class="quantity">${item.qty}</span>
