@@ -41,6 +41,50 @@ h2{
     background-color: rgba(241, 239, 239, 0.747);
     padding-left: 20px;
 }
+
+/* profiile starts */
+
+form{
+    background-color: rgb(212, 219, 219);
+    display: grid;
+    justify-content: start;
+    padding-left: 20px;
+  }
+
+  .flex1 input, .flex2 input{
+    width:90vw;
+    height:60px;
+    background-color:rgb(212, 219, 219);
+    border:none;
+    border-bottom:1px solid rgb(105, 104, 104);
+  }
+
+  .flex1 input:focus, 
+  .flex2 input:focus{
+    outline: none;
+    padding: 15px;
+  }
+
+  .submit{
+    display: grid;
+    margin-left: 10px;
+    background-color: #212529;
+    color: rgba(229, 233, 227, 0.973);
+    width:40%;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-radius: 10px;
+  }
+
+  .submit:hover{
+    background-color: #080808;
+    color:rgba(229, 233, 227, 0.973);
+    border-radius:20px;
+  }
+
+
+
+/* details form */
 .item {
     padding: 20px 30px;
     height: 120px;
@@ -100,4 +144,4 @@ h2{
     cursor: pointer;
     
 }
-
+/* details form ends */
