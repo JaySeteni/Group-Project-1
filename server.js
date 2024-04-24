@@ -11,7 +11,7 @@ window.onload = async function () {
     
     console.log(cartlist)
     try {
-        const response = await fetch('http://localhost:8000/products');
+        const response = await fetch('http://localhost:8001/products');
         products = await response.json();
         
         // Initialize sortedProducts with unsorted products
