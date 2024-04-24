@@ -7,6 +7,8 @@ let totalAmount = document.querySelector('.tot')
 let cartCount  = document.querySelector('.cartCount')
 const savedListKey = "savedList";
 
+const checkoutButton = document.getElementById("checkoutButton");
+
 
 let load = async ()=>{
     cartCount.innerHTML = cartlist.length
@@ -85,6 +87,16 @@ let tot = ()=>{
         return totalAm;
           
 }
+
+const updateCheckoutButtonState = () => {
+    if (cartlist.length > 0) {
+        checkoutButton.classList.add('enabled');
+        checkoutButton.removeAttribute("disabled");
+    } else {
+        checkoutButton.classList.remove('enabled');
+        checkoutButton.setAttribute("disabled", "disabled");
+    }
+};
 
 // FAVOURITE//
 
