@@ -156,6 +156,7 @@ nav-item, a,.nav-link:active {
     align-items: center;
     border-bottom: 1px solid #ccc;
     padding: 10px;
+    margin-left: 250px;
 }
 
 .favorite-item img {
@@ -168,6 +169,7 @@ nav-item, a,.nav-link:active {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
+    width: 340px;
 }
 
 .favorite-price {

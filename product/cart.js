@@ -91,40 +91,37 @@ let tot = ()=>{
 
 const renderFavorites = () => {
     const favoritesContainer = document.querySelector('.favorites-container');
-    favoritesContainer.innerHTML = ''; 
+    favoritesContainer.innerHTML = '';
 
-    
     let savedList = JSON.parse(localStorage.getItem(savedListKey)) || [];
 
-    
     savedList.forEach(item => {
         const favoriteItemHTML = `
             <div class="favorite-item">
                 <img src="${item.image}" alt="${item.title}" />
                 <p class="favorite-title">${item.title}</p>
                 <p class="favorite-price">$${item.price}</p>
-                <button class="remove-favorite" onclick="removeFavorite(${item.id})">Remove</button>
+                <button class="remove-favorite" onclick="removeFavorite('${item.id}')">Remove</button>
             </div>
         `;
         favoritesContainer.innerHTML += favoriteItemHTML;
     });
 };
 
-
 window.addEventListener('DOMContentLoaded', () => {
     renderFavorites();
 });
 
-
 const removeFavorite = (itemId) => {
     let savedList = JSON.parse(localStorage.getItem(savedListKey)) || [];
 
+    console.log("Before removal:", savedList);
+
     savedList = savedList.filter(item => item.id !== itemId);
-    
+
+    console.log("After removal:", savedList);
+
     localStorage.setItem(savedListKey, JSON.stringify(savedList));
 
     renderFavorites();
 };
-
-
-
