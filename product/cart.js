@@ -1,5 +1,7 @@
 let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : []
 let totalAm = Number(localStorage.getItem('TotalAmount')) || 0
+let favs = document.querySelector('.favs')
+
 
 let container = document.querySelector('.product')
 let cartItems = document.querySelector('.items')
@@ -11,6 +13,9 @@ const checkoutButton = document.getElementById("checkoutButton");
 
 
 let load = async ()=>{
+    let forfavs = JSON.parse(localStorage.getItem(savedListKey)) || [];
+    favs.innerHTML = forfavs.length
+
     cartCount.innerHTML = cartlist.length
     totalAmount.innerHTML=totalAm.toFixed(2)
     cartItems.innerHTML = ""

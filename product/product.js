@@ -7,10 +7,14 @@ count.innerHTML = cartlist.length
 let totalAm = Number(localStorage.getItem('TotalAmount')) || 0
 
 let container = document.querySelector('.product')
-
+let favs = document.querySelector('.favs')
+let forfavs;
 
 
 window.addEventListener('DOMContentLoaded', async ()=>{
+
+    forfavs = JSON.parse(localStorage.getItem(savedListKey)) || [];
+    favs.innerHTML = forfavs.length
     try {
         const productId = window.location.search.substring(4);
         const data = await fetch(`http://localhost:8000/products/${productId}`)
@@ -166,6 +170,9 @@ let saveForLaterButton =  async (item_id) => {
   } else {
     alert("Product already saved!");
   }
+  forfavs = await JSON.parse(localStorage.getItem(savedListKey)) || [];
+  console.log(forfavs)
+  favs.innerHTML = forfavs.length
 }
 
 
