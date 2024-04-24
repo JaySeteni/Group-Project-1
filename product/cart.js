@@ -88,15 +88,15 @@ let tot = ()=>{
           
 }
 
-const updateCheckoutButtonState = () => {
-    if (cartlist.length > 0) {
-        checkoutButton.classList.add('enabled');
-        checkoutButton.removeAttribute("disabled");
-    } else {
-        checkoutButton.classList.remove('enabled');
-        checkoutButton.setAttribute("disabled", "disabled");
-    }
-};
+// const updateCheckoutButtonState = () => {
+//     if (cartlist.length > 0) {
+//         checkoutButton.classList.add('enabled');
+//         checkoutButton.removeAttribute("disabled");
+//     } else {
+//         checkoutButton.classList.remove('enabled');
+//         checkoutButton.setAttribute("disabled", "disabled");
+//     }
+// };
 
 // FAVOURITE//
 

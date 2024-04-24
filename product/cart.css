@@ -148,7 +148,9 @@ nav-item, a,.nav-link:active {
     width: 120px;
     
   }
-
+ a.checkLink{
+      text-decoration: none;
+    }
   /* .checkout-button {
     background-color: #ccc; 
     cursor: not-allowed; 
