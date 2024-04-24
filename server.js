@@ -75,9 +75,9 @@ function displaySearchResults(products) {
 
     products.forEach(product => {
         const productDiv = document.createElement('div'); 
-        productDiv.classList.add('product');
+        productDiv.classList.add('productS');
         productDiv.innerHTML = `
-            <div style="height:200px;" class="image-container products">    
+            <div style="height:200px;" class="image-container productsSearch">    
                 <img style="height:70px; width:70px; class="img" src="${product.image}" alt="${product.title}">
                 <div style="margin-top: 0;" class="cardBody">
                     <span style="margin-top: 0;">${product.title}</span>

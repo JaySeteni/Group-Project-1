@@ -93,6 +93,10 @@ color: rgb(187, 199, 211) !important;
     margin-block: 30px;
     margin-inline: 40px;
   }
+  #search-results{
+    height: 90%;
+    overflow: scroll;
+  }
 
   .product {
     position: relative;
@@ -123,7 +127,22 @@ color: rgb(187, 199, 211) !important;
     height: 150px;
     
   }
-
+  .productS{
+    
+    display: grid;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .productsSearch{
+    position: relative;
+    width: 220px;
+    height: 290px;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #abb5bd;
+    border-radius: 8px;
+    box-shadow: rgba(1, 27, 43, 0.35) 0px 10px 15px;
+  }
   .cardBody{
     overflow: hidden;
     white-space: nowrap;
