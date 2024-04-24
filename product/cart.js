@@ -5,6 +5,8 @@ let container = document.querySelector('.product')
 let cartItems = document.querySelector('.items')
 let totalAmount = document.querySelector('.tot')
 let cartCount  = document.querySelector('.cartCount')
+const savedListKey = "savedList";
+
 
 let load = async ()=>{
     cartCount.innerHTML = cartlist.length
@@ -83,12 +85,46 @@ let tot = ()=>{
         return totalAm;
           
 }
-// removeProduct(index,e) {
-//     console.log(this.items[index].qty)
-//     this.items.splice(index, 1);
-//     this.Total();
-//     localStorage.setItem('for', JSON.stringify(this.items))
-//   }
+
+// FAVOURITE//
+
+
+const renderFavorites = () => {
+    const favoritesContainer = document.querySelector('.favorites-container');
+    favoritesContainer.innerHTML = ''; 
+
+    
+    let savedList = JSON.parse(localStorage.getItem(savedListKey)) || [];
+
+    
+    savedList.forEach(item => {
+        const favoriteItemHTML = `
+            <div class="favorite-item">
+                <img src="${item.image}" alt="${item.title}" />
+                <p class="favorite-title">${item.title}</p>
+                <p class="favorite-price">$${item.price}</p>
+                <button class="remove-favorite" onclick="removeFavorite(${item.id})">Remove</button>
+            </div>
+        `;
+        favoritesContainer.innerHTML += favoriteItemHTML;
+    });
+};
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    renderFavorites();
+});
+
+
+const removeFavorite = (itemId) => {
+    let savedList = JSON.parse(localStorage.getItem(savedListKey)) || [];
+
+    savedList = savedList.filter(item => item.id !== itemId);
+    
+    localStorage.setItem(savedListKey, JSON.stringify(savedList));
+
+    renderFavorites();
+};
 
 
 
