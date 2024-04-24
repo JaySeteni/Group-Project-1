@@ -127,10 +127,76 @@ nav-item, a,.nav-link:active {
     text-align: center;
     font-size: 18px;
     color: red;
-    font-weight: 300;
+    font-weight: 600;
     margin-top: 10px;
     
   }
+
+  
+  .text-white {
+    color: rgb(10, 9, 9);
+  }
+
+  .btn1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #110d11;
+    color: #E1E8EE;
+    padding: 10px;
+    width: 120px;
+    
+  }
+
+  /* FAVOURITE */
+
+  .favorite-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-left: 250px;
+}
+
+.favorite-item img {
+    width: 100px; 
+    height: 100px; 
+    margin-right: 20px;
+}
+
+.favorite-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 340px;
+}
+
+.favorite-price {
+    font-size: 16px;
+    color: #fc0c0c;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.remove-favorite {
+    background-color: rgb(20, 20, 20); 
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.remove-favorite:hover {
+    background-color: black; 
+}
+
+h1{
+  text-align: center;
+}
+  
 
 
   @media (max-width: 800px) {
