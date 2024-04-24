@@ -115,6 +115,16 @@ height: 10px;
   }
 
 
+  .products {
+    position: relative;
+    width: 160px;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #abb5bd;
+    border-radius: 8px;
+    box-shadow: rgba(1, 27, 43, 0.35) 0px 10px 15px;
+     
+  }
   .product img {
     max-width: 100%;
     width: 130px;
