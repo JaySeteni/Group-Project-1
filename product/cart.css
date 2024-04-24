@@ -149,6 +149,16 @@ nav-item, a,.nav-link:active {
     
   }
 
+  /* .checkout-button {
+    background-color: #ccc; 
+    cursor: not-allowed; 
+}
+
+.checkout-button.enabled {
+    background-color: #4CAF50; 
+    cursor: pointer; 
+} */
+
   /* FAVOURITE */
 
   .favorite-item {
