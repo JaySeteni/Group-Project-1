@@ -112,7 +112,7 @@ const renderFavorites = () => {
             <div class="favorite-item">
                 <img src="${item.image}" alt="${item.title}" />
                 <p class="favorite-title">${item.title}</p>
-                <p class="favorite-price">$${item.price}</p>
+                <p class="favorite-price">R${item.price}</p>
                 <button class="remove-favorite" onclick="removeFavorite('${item.id}')">Remove</button>
             </div>
         `;
