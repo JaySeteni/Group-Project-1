@@ -16,7 +16,7 @@ window.onload = async function () {
     favs.innerHTML = forfavs.length
     console.log(cartlist)
     try {
-        const response = await fetch('http://localhost:8001/products');
+        const response = await fetch('http://localhost:8000/products');
         products = await response.json();
         
         // Initialize sortedProducts with unsorted products
