@@ -7,8 +7,13 @@ let count = document.querySelector('.cartCount')
 let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : []
     count.innerHTML = cartlist.length
 
+let favs = document.querySelector('.favs')
+let forfavs;
+
+
 window.onload = async function () {
-    
+    forfavs = JSON.parse(localStorage.getItem("savedList")) || [];
+    favs.innerHTML = forfavs.length
     console.log(cartlist)
     try {
         const response = await fetch('http://localhost:8001/products');

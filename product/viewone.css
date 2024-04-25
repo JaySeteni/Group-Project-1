@@ -43,7 +43,9 @@ nav-item, a,.nav-link:active {
     color:  rgb(187, 199, 211) !important; 
   }
 
-
+  .dropdown-toggle::after {
+    content: none;
+  }
 /*Navigation ends*/
 .product {
     background-color: #fff;

@@ -106,7 +106,7 @@ let tot = ()=>{
 // FAVOURITE//
 
 
-const renderFavorites = () => {
+const renderFavorites =  () => {
     const favoritesContainer = document.querySelector('.favorites-container');
     favoritesContainer.innerHTML = '';
 
@@ -129,7 +129,7 @@ window.addEventListener('DOMContentLoaded', () => {
     renderFavorites();
 });
 
-const removeFavorite = (itemId) => {
+const removeFavorite = async (itemId) => {
     let savedList = JSON.parse(localStorage.getItem(savedListKey)) || [];
 
     console.log("Before removal:", savedList);
@@ -139,6 +139,10 @@ const removeFavorite = (itemId) => {
     console.log("After removal:", savedList);
 
     localStorage.setItem(savedListKey, JSON.stringify(savedList));
+
+    let forfavs = await JSON.parse(localStorage.getItem(savedListKey)) || [];
+    favs.innerHTML = forfavs.length
+
 
     renderFavorites();
 };
