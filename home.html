@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
+   
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+ <link rel="stylesheet" href="product/cart.css">
     <title>Home</title>
 </head>
 <body>
@@ -30,6 +32,14 @@
           <li class="nav-item">
             <a class="nav-link" href="./product/cart.html"><span><i class="fa-solid fa-bag-shopping" style="color: #e4e5e7;"></i> <span class="cartCount">0</span></a>
             
+          </li>
+          <li class="nav-item dropdown-left">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+              <span><i class="fa fa-heart " style="color: #e4e5e7;"></i> 
+                <span class="favs">0</span></a>
+
+                
+                <div class="favorites-container dropdown-menu"></div>
           </li>
         </ul>
       </div>

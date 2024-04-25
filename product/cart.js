@@ -1,5 +1,7 @@
 let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : []
 let totalAm = Number(localStorage.getItem('TotalAmount')) || 0
+let favs = document.querySelector('.favs')
+
 
 let container = document.querySelector('.product')
 let cartItems = document.querySelector('.items')
@@ -11,6 +13,9 @@ const checkoutButton = document.getElementById("checkoutButton");
 
 
 let load = async ()=>{
+    let forfavs = JSON.parse(localStorage.getItem(savedListKey)) || [];
+    favs.innerHTML = forfavs.length
+
     cartCount.innerHTML = cartlist.length
     totalAmount.innerHTML=totalAm.toFixed(2)
     cartItems.innerHTML = ""
@@ -101,7 +106,7 @@ let tot = ()=>{
 // FAVOURITE//
 
 
-const renderFavorites = () => {
+const renderFavorites =  () => {
     const favoritesContainer = document.querySelector('.favorites-container');
     favoritesContainer.innerHTML = '';
 
@@ -124,7 +129,7 @@ window.addEventListener('DOMContentLoaded', () => {
     renderFavorites();
 });
 
-const removeFavorite = (itemId) => {
+const removeFavorite = async (itemId) => {
     let savedList = JSON.parse(localStorage.getItem(savedListKey)) || [];
 
     console.log("Before removal:", savedList);
@@ -134,6 +139,10 @@ const removeFavorite = (itemId) => {
     console.log("After removal:", savedList);
 
     localStorage.setItem(savedListKey, JSON.stringify(savedList));
+
+    let forfavs = await JSON.parse(localStorage.getItem(savedListKey)) || [];
+    favs.innerHTML = forfavs.length
+
 
     renderFavorites();
 };

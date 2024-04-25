@@ -51,7 +51,10 @@ nav-item, a,.nav-link:active {
     display: flex;
     flex-direction: column;
   }
-
+  
+  .dropdown-toggle::after {
+    content: none;
+  }
   
   .item {
     padding: 20px 30px;

@@ -7,11 +7,16 @@ let count = document.querySelector('.cartCount')
 let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("Cart")) : []
     count.innerHTML = cartlist.length
 
+let favs = document.querySelector('.favs')
+let forfavs;
+
+
 window.onload = async function () {
-    
+    forfavs = JSON.parse(localStorage.getItem("savedList")) || [];
+    favs.innerHTML = forfavs.length
     console.log(cartlist)
     try {
-        const response = await fetch('http://localhost:8000/products');
+        const response = await fetch('http://localhost:8001/products');
         products = await response.json();
         
         // Initialize sortedProducts with unsorted products
@@ -75,9 +80,9 @@ function displaySearchResults(products) {
 
     products.forEach(product => {
         const productDiv = document.createElement('div'); 
-        productDiv.classList.add('product');
+        productDiv.classList.add('productS');
         productDiv.innerHTML = `
-            <div style="height:200px;" class="image-container products">    
+            <div style="height:200px;" class="image-container productsSearch">    
                 <img style="height:70px; width:70px; class="img" src="${product.image}" alt="${product.title}">
                 <div style="margin-top: 0;" class="cardBody">
                     <span style="margin-top: 0;">${product.title}</span>

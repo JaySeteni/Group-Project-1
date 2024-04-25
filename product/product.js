@@ -4,12 +4,17 @@ let cartlist = localStorage.getItem("Cart") ? JSON.parse(localStorage.getItem("C
 let db_productsq;
 let count = document.querySelector('.cartCount')
 count.innerHTML = cartlist.length
+let totalAm = Number(localStorage.getItem('TotalAmount')) || 0
 
 let container = document.querySelector('.product')
-
+let favs = document.querySelector('.favs')
+let forfavs;
 
 
 window.addEventListener('DOMContentLoaded', async ()=>{
+
+    forfavs = JSON.parse(localStorage.getItem(savedListKey)) || [];
+    favs.innerHTML = forfavs.length
     try {
         const productId = window.location.search.substring(4);
         const data = await fetch(`http://localhost:8000/products/${productId}`)
@@ -105,18 +110,38 @@ let  addtoCart = async (prod)=>{
                             cartItem.qty += 1;
                         }
             });
+            alert("Item has been to cart succefully")
             localStorage.setItem('Cart',JSON.stringify(cartlist))
     } else {
             cartlist.push({ ...newItem, qty: 1 });
             localStorage.setItem('Cart',JSON.stringify(cartlist))
+            alert("Item has been to cart succefully")
             }
             
     
 console.log(cartlist);
-    
+count.innerHTML = cartlist.length
+    tot()
 }
 
+let tot = ()=>{
+    totalAm = 0
 
+    if (!Array.isArray(cartlist)) {
+        throw new Error("cartItems must be an array");
+      }
+    let total = 0;
+
+    for (const item of cartlist) {
+       
+        totalAm += item.price;
+    }
+      
+   
+    localStorage.setItem('TotalAmount', JSON.stringify(totalAm))
+    return totalAm;
+      
+}
 
 const savedListKey = "savedList"; 
 
@@ -145,6 +170,9 @@ let saveForLaterButton =  async (item_id) => {
   } else {
     alert("Product already saved!");
   }
+  forfavs = await JSON.parse(localStorage.getItem(savedListKey)) || [];
+  console.log(forfavs)
+  favs.innerHTML = forfavs.length
 }
 
 
