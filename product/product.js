@@ -61,6 +61,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
                 <p class="description">
                 ${item.description}
                 </p>
+                
                 <div class="rating">
                     <label class="rating-rate">
                     ${item.rating.rate}
